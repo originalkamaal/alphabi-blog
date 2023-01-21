@@ -30,7 +30,7 @@ import {
 
 const Links = [{ title: "Home", route: "/" }];
 
-export default function withAction() {
+export default function WithAction() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
 
