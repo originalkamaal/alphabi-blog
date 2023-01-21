@@ -35,8 +35,13 @@ export default function WithAction() {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <Box bg={useColorModeValue("gray.200", "gray.900")} px={4} w="full">
-      <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+    <Box bg={useColorModeValue("white", "gray.800")} px={4} w="full">
+      <Flex
+        h={16}
+        px={8}
+        alignItems={"center"}
+        justifyContent={"space-between"}
+      >
         <IconButton
           size={"md"}
           icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}

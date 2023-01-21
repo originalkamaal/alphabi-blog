@@ -1,6 +1,6 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
-import Sidebar from "@/components/Sidebar";
+import Sidebar from "@/components/SidebarOne";
 import {
   HStack,
   VStack,
@@ -10,7 +10,7 @@ import {
   Show,
 } from "@chakra-ui/react";
 import React from "react";
-
+//https://demo.tagdiv.com/newspaper_pro/wp-content/uploads/2019/10/newspaper-rec300d.jpg
 const BaseLayout = ({ children }: any) => {
   return (
     <VStack>
@@ -18,27 +18,7 @@ const BaseLayout = ({ children }: any) => {
         <Navbar />
       </HStack>
 
-      <Flex w="full">
-        <Box
-          flex="4"
-          ml={2}
-          rounded="md"
-          bg={useColorModeValue("gray.50", "gray.900")}
-        >
-          {children}
-        </Box>
-        <Box
-          flex={{ base: "0", md: "1" }}
-          mx={2}
-          p={4}
-          bg={useColorModeValue("gray.50", "gray.900")}
-          rounded="md"
-        >
-          <Show above="md">
-            <Sidebar />
-          </Show>
-        </Box>
-      </Flex>
+      <Flex w="full">{children}</Flex>
     </VStack>
   );
 };
